@@ -50,7 +50,7 @@ jobs:
           $retries = 0
           while (-not $tsIP -and $retries -lt 10) {
               $tsIP = & "$env:ProgramFiles\Tailscale\tailscale.exe" ip -4
-              Start-Sleep -Seconds 5000000000000000000000
+              Start-Sleep -Seconds 5
               $retries++
           }
           if (-not $tsIP) {
